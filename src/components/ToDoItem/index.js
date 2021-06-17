@@ -17,9 +17,18 @@ class ToDoItem extends React.Component {
         done: this.props.done
     }
 
+    // componentUnmount = () => {
+    //     this.setState({ tasks: [] })
+    // }
+
     toggleDone = () => {
         this.setState({ done: !this.state.done })
+
+        // const timeoutTask = setTimeout(this.componentUnmount, 1000)
+        // this.setState({ timeoutTask })
     }
+
+    // componentWillUnmount = () => clearTimeout(this.timeoutTask)
 
     render() {
         const { text } = this.props

@@ -14,7 +14,7 @@ const Button = styled.button`
 `
 const TextInput = styled.input`
   padding: 5px;
-  font-size: 0.7em;
+  font-size: 1em;
   background: #232632;
   color: #d3d4d6;
   width: 100%;
@@ -35,7 +35,7 @@ const Container = styled.div`
 const NewTodoForm = ({ onChange, onSubmit, draft }) => (
   <Container>
     <TextInput type='text' onChange={onChange} value={draft} />
-    <Button onClick={onSubmit}>Dodaj</Button>
+    <Button onClick={onSubmit}>Add</Button>
   </Container>
 )
 

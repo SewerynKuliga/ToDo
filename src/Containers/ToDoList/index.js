@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ToDoItem from '../../components/ToDoItem'
 import NewTodoForm from '../../components/NewTodoForm'
 import styled from 'styled-components'
@@ -30,8 +30,11 @@ const DestroyButton = styled.button`
 class ToDoList extends React.Component {
     static defaultProps = {
         tasks: [
-            { text: 'Do shopping' },
-            { done: false, text: 'clean the garage' }
+            { done: true, text: 'Learn HTML and CSS' },
+            { done: true, text: 'Learn JavaScript' },
+            { done: true, text: 'Learn React.js' },
+            { done: false, text: 'Learn Redux' },
+            { done: false, text: 'Learn Java' }
         ],
         title: 'My stuff'
     }
@@ -53,6 +56,7 @@ class ToDoList extends React.Component {
 
     removeAll = () => {
         this.setState({ tasks: [] })
+
     }
 
     render() {
